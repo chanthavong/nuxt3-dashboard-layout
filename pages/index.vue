@@ -110,7 +110,7 @@
           <tbody class="divide-y divide-gray-200">
             <tr>
               <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-                John Doe
+               <nuxt-link to="/employee/1"> John Doe</nuxt-link>
               </td>
               <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
                 24/05/1995

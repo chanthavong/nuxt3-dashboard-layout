@@ -79,8 +79,8 @@
     </section>
 
     <section class="mt-4">
-      <h3 class="text-lg text-gray-500">Employees</h3>
-      <div class="overflow-x-auto">
+      <h3 class="text-lg text-gray-500 py-2">Employees</h3>
+      <div class="overflow-x-auto border rounded-xl">
         <table class="min-w-full text-sm divide-y-2 divide-gray-200">
           <thead>
             <tr>
@@ -110,7 +110,7 @@
           <tbody class="divide-y divide-gray-200">
             <tr>
               <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
-               <nuxt-link to="/employee/1"> John Doe</nuxt-link>
+                <nuxt-link to="/employee/1"> John Doe</nuxt-link>
               </td>
               <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
                 24/05/1995
@@ -152,3 +152,10 @@
     </section>
   </div>
 </template>
+
+<script setup lang="ts">
+const { errorLog, debugLog } = useDebug();
+errorLog("error log");
+debugLog("debug log");
+
+</script>

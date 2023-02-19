@@ -195,3 +195,8 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const { getSetting } = useAppSetting();
+getSetting();
+</script>

@@ -24,7 +24,7 @@
             />
           </svg>
 
-          <span class="text-xs font-medium"> 67.81% </span>
+          <span class="text-xs font-medium"> {{ formatNumber(67.81) }}% </span>
         </div>
 
         <div>
@@ -33,9 +33,13 @@
           </strong>
 
           <p>
-            <span class="text-2xl font-medium text-gray-900"> $240.94 </span>
+            <span class="text-2xl font-medium text-gray-900">
+              {{ formatCurrency(240.94) }}
+            </span>
 
-            <span class="text-xs text-gray-500"> from $404.32 </span>
+            <span class="text-xs text-gray-500">
+              from {{ formatCurrency(404.32) }}
+            </span>
           </p>
         </div>
       </article>
@@ -61,7 +65,7 @@
             />
           </svg>
 
-          <span class="text-xs font-medium"> 67.81% </span>
+          <span class="text-xs font-medium"> {{ formatNumber(67.81) }}% </span>
         </div>
 
         <div>
@@ -70,9 +74,13 @@
           </strong>
 
           <p>
-            <span class="text-2xl font-medium text-gray-900"> $404.32 </span>
+            <span class="text-2xl font-medium text-gray-900">
+              {{ formatCurrency(404.32) }}
+            </span>
 
-            <span class="text-xs text-gray-500"> from $240.94 </span>
+            <span class="text-xs text-gray-500">
+              from {{ formatCurrency(240.94) }}
+            </span>
           </p>
         </div>
       </article>
@@ -80,7 +88,7 @@
 
     <section class="mt-4">
       <h3 class="text-lg text-gray-500 py-2">Employees</h3>
-      <div class="overflow-x-auto border rounded-xl">
+      <div class="overflow-x-auto border rounded-md">
         <table class="min-w-full text-sm divide-y-2 divide-gray-200">
           <thead>
             <tr>
@@ -113,38 +121,14 @@
                 <nuxt-link to="/employee/1"> John Doe</nuxt-link>
               </td>
               <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
-                24/05/1995
+                {{ formatDate(new Date()) }}
               </td>
               <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
                 Web Developer
               </td>
               <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
-                $120,000
+                {{ formatCurrency(1200000) }}
               </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 font-medium whitespace-nowrap">Jane Doe</td>
-              <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
-                04/11/1980
-              </td>
-              <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
-                Web Designer
-              </td>
-              <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
-                $100,000
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 font-medium whitespace-nowrap">
-                Gary Barlow
-              </td>
-              <td class="px-4 py-2 text-gray-700 whitespace-nowrap">
-                24/05/1995
-              </td>
-              <td class="px-4 py-2 text-gray-700 whitespace-nowrap">Singer</td>
-              <td class="px-4 py-2 text-gray-700 whitespace-nowrap">$20,000</td>
             </tr>
           </tbody>
         </table>
@@ -153,9 +137,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const { errorLog, debugLog } = useDebug();
-errorLog("error log");
-debugLog("debug log");
-
-</script>
+<script setup lang="ts"></script>
